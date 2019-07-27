@@ -1,16 +1,16 @@
-import { AppPage } from './app.po';
+import { Shared } from './shared';
 import { browser, logging } from 'protractor';
 
-xdescribe('workspace-project App', () => {
-  let page: AppPage;
+describe('navbar', () => {
+  let shared: Shared;
 
   beforeEach(() => {
-    page = new AppPage();
+    shared = new Shared();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to userList!');
+  it('should display title', () => {
+    shared.navigateTo();
+    expect(shared.getTitleText()).toEqual('User List');
   });
 
   afterEach(async () => {
