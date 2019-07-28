@@ -1,12 +1,18 @@
-<div *ngFor="let user of users; let i = index">
-  <span>{{user.name}}</span><br>
-  <span>{{user.email}}</span><br>
-  <span>{{user.address.street}}</span><br>
-  <span>{{user.address.suite}}</span><br>
-  <span>{{user.address.zipcode}}</span><br>
-  <span>{{user.address.city}}</span><br>
-  <span>{{user.address.geo.lat}}</span><br>
-  <span>{{user.address.geo.lng}}</span><br>
-  <span>{{user.website}}</span><br>
-  <br><br><br>
+<div class="list-container">
+  <div 
+    fxLayout="row wrap" 
+    fxLayout.lt-sm="column" 
+    fxLayoutGap="32px" 
+    fxLayoutAlign="flex-start"
+  >
+    <div 
+      *ngFor="let user of users;"
+      class="card-container"
+      fxFlex="0 1 calc(33.3% - 32px)"
+      fxFlex.lt-md="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="100%"
+    >
+      <app-user-card [user]="user"></app-user-card>
+    </div>
+  </div>
 </div>

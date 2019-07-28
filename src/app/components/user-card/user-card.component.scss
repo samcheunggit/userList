@@ -1,0 +1,28 @@
+.card-title {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none!important;
+}
+
+mat-divider {
+  margin: 16px;
+}
+
+mat-icon {
+  color: grey;
+}
+
+a.link {
+  text-decoration: none !important;
+  display: flex;
+}
+
+.left-column {
+  flex: 15%;
+}
+
+.right-column {
+  flex: 85%;
+}
