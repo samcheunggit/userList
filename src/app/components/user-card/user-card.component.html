@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title class="card-title">{{user.name}}</mat-card-title>
+    <mat-card-content>
+      <div>
+        <a href="mailto:{{user.email}}" class="link">
+          <mat-icon class="left-column"> email</mat-icon>
+          <mat-form-field class="right-column">
+            <input matInput placeholder="Email" value="{{user.email}}" disabled>
+          </mat-form-field>
+        </a>
+      </div>
+      <div>
+        <a href="{{mapUrl}}" target="_blank" class="link">
+          <mat-icon class="left-column">location_on</mat-icon>
+          <mat-form-field class="right-column">
+            <textarea matInput placeholder="Address" disabled rows="3">Suite: {{user.address.suite}}&#13;&#10;Street: {{user.address.street}}&#13;&#10;City: {{user.address.city}}&#13;&#10;
+            </textarea>
+          </mat-form-field>
+        </a>
+      </div>
+      <div>
+        <a href="{{checkedWebsite}}" target="_blank" class="link">
+          <mat-icon class="left-column">language</mat-icon>
+          <mat-form-field class="right-column">
+            <input matInput placeholder="Website" value="{{user.website}}" disabled>
+          </mat-form-field>
+        </a>
+      </div>
+    </mat-card-content>
+</mat-card>

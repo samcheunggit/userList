@@ -1,8 +1,11 @@
 import { async, inject, ComponentFixture, TestBed, fakeAsync, tick, } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { UsersPageComponent } from './users-page.component';
+import { UserCardComponent } from '../user-card/user-card.component';
 import { async as _async } from 'rxjs/scheduler/async';
 import { of } from 'rxjs/observable/of';
+import { AppMaterialModule } from '../../app-material/app-material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UsersService } from '../../services/users.service';
 import { IUser } from '../../interfaces/user';
@@ -20,9 +23,9 @@ describe('UsersPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule ],
+      imports: [ HttpClientTestingModule, AppMaterialModule, BrowserAnimationsModule ],
       providers: [ UsersService ],
-      declarations: [ UsersPageComponent ]
+      declarations: [ UsersPageComponent, UserCardComponent ]
     })
     .compileComponents();
   }));
