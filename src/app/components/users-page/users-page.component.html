@@ -1,1 +1,12 @@
-<p>users-page works!</p>
+<div *ngFor="let user of users; let i = index">
+  <span>{{user.name}}</span><br>
+  <span>{{user.email}}</span><br>
+  <span>{{user.address.street}}</span><br>
+  <span>{{user.address.suite}}</span><br>
+  <span>{{user.address.zipcode}}</span><br>
+  <span>{{user.address.city}}</span><br>
+  <span>{{user.address.geo.lat}}</span><br>
+  <span>{{user.address.geo.lng}}</span><br>
+  <span>{{user.website}}</span><br>
+  <br><br><br>
+</div>
