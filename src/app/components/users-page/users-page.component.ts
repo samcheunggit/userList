@@ -12,6 +12,7 @@ import { IUser } from '../../interfaces/user';
 export class UsersPageComponent implements OnInit {
 
   users: IUser[] = [];
+  isLoading: boolean = true;
 
   constructor(private usersService: UsersService) { }
 
@@ -24,6 +25,7 @@ export class UsersPageComponent implements OnInit {
     },
     () => {
       console.log('finished');
+      this.isLoading = false;
     });
   }
 
