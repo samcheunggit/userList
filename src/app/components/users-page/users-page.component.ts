@@ -12,7 +12,7 @@ import { IUser } from '../../interfaces/user';
 export class UsersPageComponent implements OnInit {
 
   users: IUser[] = [];
-  isLoading: boolean = true;
+  isLoading = true;
 
   constructor(private usersService: UsersService) { }
 
@@ -21,6 +21,7 @@ export class UsersPageComponent implements OnInit {
       this.users = result;
     },
     (error) => {
+      // error interceptor will handle the http error 
       console.log('error: ', error);
     },
     () => {

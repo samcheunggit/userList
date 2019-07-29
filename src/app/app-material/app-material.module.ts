@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
-  MatToolbarModule, 
-  MatCardModule, 
-  MatFormFieldModule, 
-  MatIconModule, 
-  MatInputModule, 
+import {
+  MatToolbarModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
   MatProgressSpinnerModule,
   MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS,
 } from '@angular/material';
