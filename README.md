@@ -1,27 +1,40 @@
 # UserList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+https://techtest-userlist.herokuapp.com/
 
-## Development server
+This project shows the list of user from the given endpoint, each user is displayed as a card, with the following information:
+* Name
+* Email
+* Address (Suite, Street, City)
+* Website
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Checklist
+- [x] Typescript
+- [x] Consume given API endpoint, list of users looks tidy
+- [x] Responsiveness (tested on different sizes and browsers)
+- [x] Address is clicked, open new tab to show location in google map with given latitude and longitude, it will open default google map app in iphone
+- [x] Website is clicked, open new tab to redirect given website url
+- [x] Email is clicked, open default email client
 
-## Code scaffolding
+# Stack
+* Angular 8.1.2
+* Angular Material
+* Express.js / Node.js
+* Heroku
+* Git / Github
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Run on local
+1. download the whole project
+2. make sure the angular cli is installed, if not, run ```npm install -g @angular/cli``` to install it.
+3. cd to the root folder of downloaded project, run command ```ng serve```
+4. open browser and navigate to `http://localhost:4200`
 
-## Build
+# Run unit test
+Unit tests are written for each components to make sure every single functions work as expected.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run ```ng test``` to launch all unit test cases.
 
-## Running unit tests
+# Run end to end test
+End to end tests are written to test the whole workflow in the application, from loading user data, displaying all user data in card components, different behaviours such as address link and error scenario.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run ```ng e2e``` to launch all e2e test cases.
