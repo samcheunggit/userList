@@ -21,7 +21,7 @@ export class UsersPageComponent implements OnInit {
       this.users = result;
     },
     (error) => {
-      // error interceptor will handle the http error 
+      // error interceptor will handle the http error
       console.log('error: ', error);
     },
     () => {
