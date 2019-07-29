@@ -5,7 +5,7 @@
         <a href="mailto:{{user.email}}" class="link">
           <mat-icon class="left-column"> email</mat-icon>
           <mat-form-field class="right-column">
-            <input matInput placeholder="Email" value="{{user.email}}" disabled>
+            <input matInput placeholder="Email" value="{{user.email}}" readonly>
           </mat-form-field>
         </a>
       </div>
@@ -13,8 +13,11 @@
         <a href="{{mapUrl}}" target="_blank" class="link">
           <mat-icon class="left-column">location_on</mat-icon>
           <mat-form-field class="right-column">
-            <textarea matInput placeholder="Address" disabled rows="3">Suite: {{user.address.suite}}&#13;&#10;Street: {{user.address.street}}&#13;&#10;City: {{user.address.city}}&#13;&#10;
-            </textarea>
+            <textarea matInput 
+            placeholder="Address" 
+            value ="Suite: {{user.address.suite}}&#13;&#10;Street: {{user.address.street}}&#13;&#10;City: {{user.address.city}}" 
+            cdkTextareaAutosize 
+            readonly></textarea>
           </mat-form-field>
         </a>
       </div>
@@ -22,7 +25,7 @@
         <a href="{{checkedWebsite}}" target="_blank" class="link">
           <mat-icon class="left-column">language</mat-icon>
           <mat-form-field class="right-column">
-            <input matInput placeholder="Website" value="{{user.website}}" disabled>
+            <input matInput placeholder="Website" value="{{user.website}}" readonly>
           </mat-form-field>
         </a>
       </div>

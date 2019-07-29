@@ -2,16 +2,12 @@
   margin-bottom: 20px;
 }
 
-textarea {
-  resize: none!important;
-}
-
-mat-divider {
-  margin: 16px;
+input, textarea {
+  cursor: pointer;
 }
 
 mat-icon {
-  color: grey;
+  color: #808080;
 }
 
 a.link {
