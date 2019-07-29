@@ -6,11 +6,10 @@ import {
   HttpResponse,
   HttpErrorResponse
  } from '@angular/common/http';
- import { Observable, throwError } from 'rxjs';
- import { retry, catchError } from 'rxjs/operators';
- import { Router } from '@angular/router';
- 
- export class ErrorInterceptor implements HttpInterceptor {
+import { Observable, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+export class ErrorInterceptor implements HttpInterceptor {
 
   constructor(private router: Router) {}
 
@@ -30,6 +29,6 @@ import {
           this.router.navigate(['/error/:message', { message: errorMessage }]);
           return throwError(errorMessage);
         })
-      )
+      );
   }
- }
+}
